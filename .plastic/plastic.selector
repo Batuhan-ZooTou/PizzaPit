@@ -1,0 +1,4 @@
+repository "PizzaPit@berantk@cloud"
+  path "/"
+    br "/main"
+    co "/main"

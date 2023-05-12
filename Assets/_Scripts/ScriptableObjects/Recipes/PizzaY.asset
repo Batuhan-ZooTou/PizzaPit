@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d5fd0f1e1fe5243bb2f775f3adebd5, type: 3}
+  m_Name: PizzaY
+  m_EditorClassIdentifier: 
+  pizzaName: PizzaY
+  prefab: {fileID: 0}
+  mustHave:
+  - {fileID: 11400000, guid: fc852160707e6bb49ac0680073ca1b59, type: 2}
+  - {fileID: 11400000, guid: 3e5deb8fdebc23e4a90d37ea422077db, type: 2}
+  - {fileID: 11400000, guid: 883e4416a23a2104d98243e3fefc903e, type: 2}
+  - {fileID: 11400000, guid: 929e02831d4e4e64bba99744d79059c1, type: 2}
+  cost: 90
+  expEarn: 150
