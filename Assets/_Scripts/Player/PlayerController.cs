@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
@@ -57,9 +57,9 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
     }
-   
-   
-    
+
+
+
     void MovePlayer()
     {
         Vector3 currentVelocity = rb.velocity;
