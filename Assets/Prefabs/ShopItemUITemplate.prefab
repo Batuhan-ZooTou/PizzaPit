@@ -359,7 +359,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114981089852058728}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1719543558687600
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +384,6 @@ GameObject:
   - component: {fileID: 222540482065639918}
   - component: {fileID: 114623564696631556}
   - component: {fileID: 114370117229626856}
-  - component: {fileID: 4572226446392984846}
   m_Layer: 5
   m_Name: ShopItemUITemplate
   m_TagString: Untagged
@@ -456,32 +467,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.184}
   m_EffectDistance: {x: 1, y: -3.03}
   m_UseGraphicAlpha: 1
---- !u!61 &4572226446392984846
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719543558687600}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 35}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 80, y: 60}
-  m_EdgeRadius: 0
 --- !u!1 &1778674964685298
 GameObject:
   m_ObjectHideFlags: 0

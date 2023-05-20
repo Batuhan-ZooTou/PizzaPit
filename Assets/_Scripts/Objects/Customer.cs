@@ -17,19 +17,32 @@ public class Customer : MonoBehaviour
     public int currentLine;
     public bool onLine;
     public Transform destination;
+    [HideInInspector]public Animator animator;
+    public bool hasOrder;
+    private bool isStopped;
 
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        int rng = Random.Range(0,8);
+        transform.GetChild(rng).gameObject.SetActive(true);
+
     }
     private void OnEnable()
     {
+        hasOrder = true;
         //RandomizedOrder();
         //CalculateTotalCost();
     }
     private void Update()
     {
         navMeshAgent.destination = destination.position;
+        if (Vector3.Distance(transform.position,destination.position)<=0.2f && !isStopped)
+        {
+            isStopped = true;
+            animator.SetTrigger("idle");
+        }
     }
     public void TakePizza()
     {
@@ -124,6 +137,12 @@ public class Customer : MonoBehaviour
     public void OnInteract()
     {
         onLine = false;
+        hasOrder = false;
+        isStopped = false;
+        costumerManager.currentEmptyLine--;
+        animator.SetTrigger("walk");
+        destination = costumerManager.costumerSpawnPoint;
+
         costumerManager.RealignCostumersOnLine(currentLine);
     }
     private void OnTriggerEnter(Collider other)

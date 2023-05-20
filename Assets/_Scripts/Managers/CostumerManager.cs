@@ -11,7 +11,7 @@ public class CostumerManager : MonoBehaviour
     public List<Customer> CostumersOnScene = new List<Customer>();
     public Transform costumerSpawnPoint;
     public Transform[] CostumerLinePoints;
-    private int currentEmptyLine;
+    public int currentEmptyLine;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -76,6 +76,7 @@ public class CostumerManager : MonoBehaviour
                 {
                     costumer.currentLine--;
                     costumer.destination = CostumerLinePoints[costumer.currentLine - 1];
+                    costumer.animator.SetTrigger("walk");
                 }
             }
         }
