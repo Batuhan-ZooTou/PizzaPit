@@ -113,6 +113,24 @@ public class Interactor : MonoBehaviour
             }
         }
     }
+    public void GrabIngredient(ShopBasket basket)
+    {
+        if (grabbedObject == null)
+        {
+            if (basket.ItemsInBasket.Count != 0)
+            {
+                GameObject ingredient = Instantiate(basket.ItemsInBasket[0], objectGrabPointTransform.position, Quaternion.Euler(Vector3.zero), null);
+                //GameObject ingredient = Interactable.GetComponent<IngredientTins>().ingredientPoll.Get();
+                ingredient.transform.position = objectGrabPointTransform.position;
+                ingredient.TryGetComponent(out grabbedObject);
+                Physics.IgnoreCollision(hit.collider.GetComponent<Collider>(), grabbedObject.GetComponent<Collider>(), true);
+                Physics.IgnoreCollision(player, grabbedObject.GetComponent<Collider>(), true);
+                objectGrabPointTransform.position = defaultGrabPoint;
+                grabbedObject.Grab(objectGrabPointTransform, this);
+                basket.ItemsInBasket.RemoveAt(0);
+            }
+        }
+    }
     void Update()
     {
         AdjuctGrabPoint();
@@ -181,13 +199,13 @@ public class Interactor : MonoBehaviour
                     if (pastInteractable != Interactable)
                     {
                         pastInteractable.transform.GetComponent<Outline>().OutlineWidth = 0f;
-                        Interactable.transform.GetComponent<Outline>().OutlineWidth = 10f;
+                        Interactable.transform.GetComponent<Outline>().OutlineWidth = 5f;
                     }
                     return;
                 }
                 hit.transform.TryGetComponent(out Interactable);
                 //Highlight it
-                Interactable.transform.GetComponent<Outline>().OutlineWidth = 10f;
+                Interactable.transform.GetComponent<Outline>().OutlineWidth = 5f;
                 //UI
 
             }

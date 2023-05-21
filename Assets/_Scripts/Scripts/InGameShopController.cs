@@ -19,15 +19,26 @@ public class InGameShopController : MonoBehaviour
     }
     public void OpenShop()
     {
-        isShopOpen = true;
-        crosshair.SetActive(false);
-        player.SetActive(false);
-        playerCam.SetActive(false);
-        openShopButton.SetActive(false);
-        shopCanvas.SetActive(true);
-        shopCam.SetActive(true);
-        
-
+        isShopOpen = !isShopOpen;
+        if (isShopOpen)
+        {
+            crosshair.SetActive(false);
+            //player.SetActive(false);
+            playerCam.SetActive(false);
+            openShopButton.SetActive(false);
+            shopCanvas.SetActive(true);
+            shopCam.SetActive(true);
+        }
+        else
+        {
+            isShopOpen = false;
+            shopCanvas.SetActive(false);
+            shopCam.SetActive(false);
+            openShopButton.SetActive(true);
+            //player.SetActive(true);
+            playerCam.SetActive(true);
+            crosshair.SetActive(true);
+        }
     }
     public void CloseShop()
     {
@@ -35,11 +46,8 @@ public class InGameShopController : MonoBehaviour
         shopCanvas.SetActive(false);
         shopCam.SetActive(false);
         openShopButton.SetActive(true);
-        player.SetActive(true);
+        //player.SetActive(true);
         playerCam.SetActive(true);
         crosshair.SetActive(true);
-        
-        
-        
     }
 }

@@ -2042,16 +2042,16 @@ GameObject:
   - component: {fileID: 8048190049468282395}
   - component: {fileID: 6208659489851512997}
   - component: {fileID: 6304120476646460406}
-  - component: {fileID: 2721032039660001300}
   - component: {fileID: 21215800657849516}
   - component: {fileID: 2777691218761222283}
+  - component: {fileID: 7100334840152941876}
   m_Layer: 9
   m_Name: Npc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2909506820309223608
 Transform:
   m_ObjectHideFlags: 0
@@ -2061,7 +2061,7 @@ Transform:
   m_GameObject: {fileID: 2909506820309481862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.4173722, y: -0.00000011920929, z: -6.2775044}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2909506820309244460}
@@ -2144,6 +2144,7 @@ MonoBehaviour:
   currentLine: 0
   onLine: 0
   destination: {fileID: 0}
+  animator: {fileID: 0}
   hasOrder: 0
 --- !u!114 &6304120476646460406
 MonoBehaviour:
@@ -2175,24 +2176,6 @@ MonoBehaviour:
   onDisInteract:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2721032039660001300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2909506820309481862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 0
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!54 &21215800657849516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2219,10 +2202,28 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.55
+  m_Radius: 0.4
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &7100334840152941876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309481862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309482002
 GameObject:
   m_ObjectHideFlags: 0

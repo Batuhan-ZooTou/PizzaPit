@@ -24,13 +24,14 @@ public class Shop : MonoBehaviour
 
     }
 
-    public List<ShopItem> ShopItemsList;
+    public List<ItemSO> ShopItemsList;
 
     [SerializeField] Animator NoCoinsAnim;
     [SerializeField] GameObject ItemTemplate;
     public GameObject Item;
     [SerializeField] Transform ShopScrollView;
     [SerializeField] GameObject ShopPanel;
+    public ShopBasket shopBasket;
     Button buyButton;
 
     void Start()
@@ -40,8 +41,8 @@ public class Shop : MonoBehaviour
         {
             Item = Instantiate(ItemTemplate, ShopScrollView);
             //Item.AddComponent<MouseOverInfo>();
-            Item.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].itemImage;
-            Item.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = ShopItemsList[i].itemPrice.ToString();
+            Item.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].itemIcon;
+            Item.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = ShopItemsList[i].cost.ToString();
             buyButton = Item.transform.GetChild(2).GetComponent<Button>();
             //Item.transform.GetChild(3).GetComponent<Text>().text = ShopItemsList[i].itemInfo;
             buyButton.AddEventListener(i, OnShopItemBtnClicked);
@@ -50,14 +51,15 @@ public class Shop : MonoBehaviour
     
     void OnShopItemBtnClicked(int itemIndex)
     {
-        if (Game.Instance.HasEnoughCoins(ShopItemsList[itemIndex].itemPrice))
+        if (Game.Instance.HasEnoughCoins(ShopItemsList[itemIndex].cost))
         {
-            Game.Instance.UseCoins(ShopItemsList[itemIndex].itemPrice);
+            Game.Instance.UseCoins(ShopItemsList[itemIndex].cost);
             //purchase item
-            ShopItemsList[itemIndex].IsPurchased = true;
-            ShopItemsList[itemIndex].haveItem++;
+            //ShopItemsList[itemIndex].IsPurchased = true;
+            //ShopItemsList[itemIndex].haveItem++;
             buyButton = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
             Game.Instance.UpdateAllCoinsUIText();
+            shopBasket.ItemsInBasket.Add(ShopItemsList[itemIndex].Prefab);
         }
         else
         {
