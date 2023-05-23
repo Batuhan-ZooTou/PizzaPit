@@ -143,14 +143,23 @@ public class Interactor : MonoBehaviour
         //adjusting the distance wiht mouse wheel
         if (grabbedObject != null)
         {
-            //if (mouseScrollY > 0f && Vector3.Distance(objectGrabPointTransform.position, cam.position) < interactDistance) // forward
-            //{
-            //    objectGrabPointTransform.position += cam.forward * Time.deltaTime * grabPointSpeed;
-            //}
-            //else if (mouseScrollY < 0f && Vector3.Distance(objectGrabPointTransform.position, cam.position) > holdDistance) // backwards
-            //{
-            //    objectGrabPointTransform.position -= cam.forward * Time.deltaTime * grabPointSpeed;
-            //}
+            if (mouseScrollY > 0f && Vector3.Distance(objectGrabPointTransform.position, cam.position) < interactDistance) // forward
+            {
+                objectGrabPointTransform.position += cam.forward * Time.deltaTime * grabPointSpeed*0.1f;
+                if (Vector3.Distance(objectGrabPointTransform.position, cam.position) > interactDistance)
+                {
+                    objectGrabPointTransform.position = cam.position + cam.forward * interactDistance;
+                }
+
+            }
+            else if (mouseScrollY < 0f && Vector3.Distance(objectGrabPointTransform.position, cam.position) > holdDistance) // backwards
+            {
+                objectGrabPointTransform.position -= cam.forward * Time.deltaTime * grabPointSpeed * 0.1f;
+                if (Vector3.Distance(objectGrabPointTransform.position, cam.position) < holdDistance)
+                {
+                    objectGrabPointTransform.position = cam.position + cam.forward * holdDistance;
+                }
+            }
             //adjusting the point while near walls
             if (Physics.Raycast(cam.position, cam.forward, out RaycastHit raycastHit, Vector3.Distance(cam.position, objectGrabPointTransform.position), solidLayerMask))
             {

@@ -233,6 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309250146}
   - component: {fileID: 2909506820321009440}
+  - component: {fileID: 6386217242594643892}
   m_Layer: 9
   m_Name: Character_BusinessMan_Suit
   m_TagString: Untagged
@@ -357,6 +358,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000015258789, y: 86.43996, z: -5.6034155}
     m_Extent: {x: 102.45593, y: 96.25047, z: 27.715912}
   m_DirtyAABB: 0
+--- !u!114 &6386217242594643892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309301746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309301834
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309193478}
   - component: {fileID: 2909506820321017778}
+  - component: {fileID: 5465016633850674381}
   m_Layer: 9
   m_Name: Character_Female_Coat
   m_TagString: Untagged
@@ -557,6 +577,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000038146973, y: 85.599915, z: -5.1437836}
     m_Extent: {x: 102.12044, y: 94.86452, z: 25.114859}
   m_DirtyAABB: 0
+--- !u!114 &5465016633850674381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309305512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309307200
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309192986}
   - component: {fileID: 2909506820320830234}
+  - component: {fileID: 5755672778101141376}
   m_Layer: 9
   m_Name: Character_Female_Police
   m_TagString: Untagged
@@ -982,6 +1021,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000038146973, y: 89.05433, z: -5.7677507}
     m_Extent: {x: 102.12045, y: 98.930046, z: 25.185326}
   m_DirtyAABB: 0
+--- !u!114 &5755672778101141376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309397098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309452746
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309244460}
   - component: {fileID: 2909506820320995650}
+  - component: {fileID: 1188968978191235509}
   m_Layer: 9
   m_Name: Character_BusinessMan_Shirt
   m_TagString: Untagged
@@ -1116,6 +1174,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 86.43996, z: -6.5513744}
     m_Extent: {x: 102.45596, y: 96.25047, z: 26.754984}
   m_DirtyAABB: 0
+--- !u!114 &1188968978191235509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309452746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309453164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,6 +1234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309231102}
   - component: {fileID: 2909506820320839960}
+  - component: {fileID: 1185562273776206435}
   m_Layer: 9
   m_Name: Character_Male_Hoodie
   m_TagString: Untagged
@@ -1282,6 +1359,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 85.66228, z: -7.927866}
     m_Extent: {x: 102.45599, y: 95.47479, z: 27.308996}
   m_DirtyAABB: 0
+--- !u!114 &1185562273776206435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309453896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309457590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309243458}
   - component: {fileID: 2909506820321013440}
+  - component: {fileID: 7263255601518239649}
   m_Layer: 9
   m_Name: Character_Female_Jacket
   m_TagString: Untagged
@@ -1480,6 +1576,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 85.79422, z: -5.736662}
     m_Extent: {x: 102.1203, y: 95.05966, z: 25.914097}
   m_DirtyAABB: 0
+--- !u!114 &7263255601518239649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309457614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309458178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309165698}
   - component: {fileID: 2909506820320812464}
+  - component: {fileID: 847798036655094414}
   m_Layer: 9
   m_Name: Character_BusinessWoman
   m_TagString: Untagged
@@ -1709,6 +1824,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000011444092, y: 86.18578, z: -5.4394407}
     m_Extent: {x: 102.12019, y: 95.9963, z: 24.934273}
   m_DirtyAABB: 0
+--- !u!114 &847798036655094414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309463752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309464352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,7 +2184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2909506820309223608
 Transform:
   m_ObjectHideFlags: 0
@@ -2109,8 +2242,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.4
-  m_Speed: 2
-  m_Acceleration: 5
+  m_Speed: 1.5
+  m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0.2
@@ -2139,13 +2272,17 @@ MonoBehaviour:
   pizza: {fileID: 0}
   extras: []
   cost: 0
-  maxExtraCount: 0
+  maxExtraCount: 3
   pizzaHoldPoint: {fileID: 8076059857323822148}
   currentLine: 0
   onLine: 0
   destination: {fileID: 0}
   animator: {fileID: 0}
   hasOrder: 0
+  state: 0
+  eatTime: 30
+  waitTime: 15
+  pizzaWaitTime: 60
 --- !u!114 &6304120476646460406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2265,6 +2402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309215034}
   - component: {fileID: 2909506820321029620}
+  - component: {fileID: 5388175837161794625}
   m_Layer: 9
   m_Name: Character_Male_Police
   m_TagString: Untagged
@@ -2389,6 +2527,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 89.04045, z: -4.591098}
     m_Extent: {x: 102.45596, y: 98.85097, z: 28.730614}
   m_DirtyAABB: 0
+--- !u!114 &5388175837161794625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309483864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2909506820309484150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,6 +3000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909506820309220214}
   - component: {fileID: 2909506820320817168}
+  - component: {fileID: 480633498303878244}
   m_Layer: 9
   m_Name: Character_Male_Jacket
   m_TagString: Untagged
@@ -2968,6 +3125,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 86.62144, z: -7.3431396}
     m_Extent: {x: 102.45599, y: 96.43168, z: 26.668186}
   m_DirtyAABB: 0
+--- !u!114 &480633498303878244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909506820309506410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4091901702519603550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2992,7 +3167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4091901702519603550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

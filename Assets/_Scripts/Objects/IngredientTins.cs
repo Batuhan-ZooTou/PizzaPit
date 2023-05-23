@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using TMPro;
 
 public class IngredientTins : MonoBehaviour
 {
@@ -16,10 +17,12 @@ public class IngredientTins : MonoBehaviour
     public float timeToTakeBackIngredient;
     private float counterToReset;
     public bool canReturnToPool=true;
+    public TextMeshProUGUI ingredientCountText;
     private void Awake()
     {
         ingredientPoll = new ObjectPool<GameObject>(CreateIngredient, OnTakeFromPool, OnReturnedToPool, null, true, 10);
         counterToReset = timeToTakeBackIngredient;
+        ingredientCountText.text = ingredientCount.ToString();
     }
     private void FixedUpdate()
     {
@@ -55,6 +58,7 @@ public class IngredientTins : MonoBehaviour
     {
         ingredient.gameObject.SetActive(false);
         ingredientCount++;
+        ingredientCountText.text = ingredientCount.ToString();
     }
     public void OnInteract()
     {
@@ -62,6 +66,7 @@ public class IngredientTins : MonoBehaviour
         {
             canReturnToPool = false;
             ingredientCount--;
+            ingredientCountText.text = ingredientCount.ToString();
             counterToReset = timeToTakeBackIngredient;
         }
     }

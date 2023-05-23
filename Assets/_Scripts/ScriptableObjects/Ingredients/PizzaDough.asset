@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608d40b85adb6304c9741bd7e0a7b3d8, type: 3}
+  m_Name: PizzaDough
+  m_EditorClassIdentifier: 
+  cost: 5
+  model: {fileID: 3251379734508443371, guid: e10074e91277bea41ab1be55ec85febc, type: 3}
+  Prefab: {fileID: 5135971041088005486, guid: 505b17b8eda0d7d44a37a6f4a39a4c00, type: 3}
+  itemIcon: {fileID: 21300000, guid: ae7319f1533fa564cbe2b982d512aec8, type: 3}

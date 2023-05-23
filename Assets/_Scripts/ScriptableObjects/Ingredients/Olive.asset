@@ -15,4 +15,4 @@ MonoBehaviour:
   cost: 10
   model: {fileID: 6198119622386530797, guid: 0cde2c858c7266e47987815aa44aa1fd, type: 3}
   Prefab: {fileID: 4791088659824171404, guid: bf4b2dce71aa89d4ba5e4531b477dbf6, type: 3}
-  itemIcon: {fileID: 21300000, guid: 60e44e260d6854114beb8767807a01d1, type: 3}
+  itemIcon: {fileID: 21300000, guid: b45e02135700e554db04e5b693121b13, type: 3}

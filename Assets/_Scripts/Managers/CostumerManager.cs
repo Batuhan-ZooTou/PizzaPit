@@ -37,12 +37,13 @@ public class CostumerManager : MonoBehaviour
         customer.currentLine = currentEmptyLine;
         customer.onLine = true;
     }
-    void OnReturnedToPool(Customer customer)
+    public void OnReturnedToPool(Customer customer)
     {
         CostumersOnScene.Remove(customer);
         customer.gameManager = null;
         customer.onLine = false;
         customer.gameObject.SetActive(false);
+        SpawnCostumer();
 
     }
     // Update is called once per frame
@@ -76,7 +77,9 @@ public class CostumerManager : MonoBehaviour
                 {
                     costumer.currentLine--;
                     costumer.destination = CostumerLinePoints[costumer.currentLine - 1];
-                    costumer.animator.SetTrigger("walk");
+                    costumer.state = NpcState.WalkingToLine;
+                    costumer.animator.SetBool("idle", false);
+
                 }
             }
         }
