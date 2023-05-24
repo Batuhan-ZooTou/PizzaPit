@@ -7,4 +7,5 @@ public class Interactable : MonoBehaviour
 {
     public UnityEvent onInteract;
     public UnityEvent onDisInteract;
+    public bool canInteract = true;
 }

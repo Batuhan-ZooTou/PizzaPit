@@ -16,12 +16,14 @@ public class InGameShopController : MonoBehaviour
     {
         shopCam.SetActive(false);
         shopCanvas.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void OpenShop()
     {
         isShopOpen = !isShopOpen;
         if (isShopOpen)
         {
+            Cursor.lockState = CursorLockMode.None;
             crosshair.SetActive(false);
             //player.SetActive(false);
             playerCam.SetActive(false);
@@ -31,6 +33,7 @@ public class InGameShopController : MonoBehaviour
         }
         else
         {
+            Cursor.lockState = CursorLockMode.Locked;
             isShopOpen = false;
             shopCanvas.SetActive(false);
             shopCam.SetActive(false);

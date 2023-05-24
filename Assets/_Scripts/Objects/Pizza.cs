@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Cooked
+{
+    notCooked,
+    Cooked,
+    OverCooked,
+}
 public class Pizza : MonoBehaviour
 {
+    public Cooked isCooked;
     public List<ItemSO> ingredients;
     public SauceType sauce;
     public DoughType dough;

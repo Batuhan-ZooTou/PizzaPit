@@ -5,8 +5,8 @@ using UnityEngine;
 public class ObjectGrabbable : MonoBehaviour
 {
     public ItemSO ItemSO;
-    [SerializeField]private Rigidbody objectRigidbody;
-    [SerializeField] private Transform objectGrabPointTransform;
+    public Rigidbody objectRigidbody;
+    public Transform objectGrabPointTransform;
     [SerializeField] private Collider collider;
     private Interactor player;
     public bool insideSocket;

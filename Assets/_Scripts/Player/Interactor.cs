@@ -51,6 +51,10 @@ public class Interactor : MonoBehaviour
             }
             else if (Interactable!=null)
             {
+                if (!Interactable.canInteract)
+                {
+                    return;
+                }
                 //if hits grabable object
                 if (Physics.Raycast(ray, out hit, interactDistance, grabables))
                 {
@@ -208,12 +212,20 @@ public class Interactor : MonoBehaviour
                     if (pastInteractable != Interactable)
                     {
                         pastInteractable.transform.GetComponent<Outline>().OutlineWidth = 0f;
+                        if (!Interactable.canInteract)
+                        {
+                            return;
+                        }
                         Interactable.transform.GetComponent<Outline>().OutlineWidth = 5f;
                     }
                     return;
                 }
                 hit.transform.TryGetComponent(out Interactable);
                 //Highlight it
+                if (!Interactable.canInteract)
+                {
+                    return;
+                }
                 Interactable.transform.GetComponent<Outline>().OutlineWidth = 5f;
                 //UI
 
