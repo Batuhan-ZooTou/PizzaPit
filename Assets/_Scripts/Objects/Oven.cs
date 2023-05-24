@@ -13,13 +13,10 @@ public class Oven : MonoBehaviour
     public Transform targetTransform; 
 
     private bool isPizzaCooking = false; 
-    private bool isPizzaBurnt = false; 
-
     public float cookingTime = 25f; 
     public float burntTime = 15f; 
     private float currentTimer = 0f; 
 
-    public Material burntMat; 
     private void Update()
     {
         if (!isPizzaCooking)
@@ -45,9 +42,7 @@ public class Oven : MonoBehaviour
                     }
                 }
             }
-
         }
-
         if (isPizzaCooking)
         {
             currentTimer -= Time.deltaTime;
@@ -56,24 +51,20 @@ public class Oven : MonoBehaviour
                 Obj.enabled = true;
                 currentTimer = 0f;
                 myPizza.isCooked = Cooked.OverCooked;
-
-                isPizzaBurnt = true;
-                myPizza.GetComponent<MeshRenderer>().material = burntMat;
+                myPizza.SetPizzaLook();
                 isPizzaCooking = false;
                 myPizza = null;
                 Obj = null;
             }
-
             else if (currentTimer <= 0 && Obj.objectGrabPointTransform != null)
             {
                 Obj.enabled = true;
                 myPizza.isCooked = Cooked.Cooked;
+                myPizza.SetPizzaLook();
                 isPizzaCooking = false;
                 myPizza = null;
                 Obj = null;
-                //koyulaþtýrma
             }
-
         }
     }
     public void AllowPickupPizza()

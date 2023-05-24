@@ -30,8 +30,7 @@ public class CostumerManager : MonoBehaviour
         CostumersOnScene.Add(customer);
         customer.gameManager = gameManager;
         customer.costumerManager = this;
-        customer.RandomizedOrder();
-        customer.CalculateTotalCost();
+        customer.GetRandomOrder();
         customer.transform.position = costumerSpawnPoint.position;
         customer.destination = CostumerLinePoints[currentEmptyLine-1];
         customer.currentLine = currentEmptyLine;
