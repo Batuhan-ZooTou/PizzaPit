@@ -69,7 +69,7 @@ public class Pizza : MonoBehaviour
             case DoughType.medium:
                 transform.localScale = new Vector3(transform.localScale.x, 0.75f, transform.localScale.z);
                 break;
-            case DoughType.fat:
+            case DoughType.thick:
                 transform.localScale = new Vector3(transform.localScale.x, 1f, transform.localScale.z);
                 break;
             default:

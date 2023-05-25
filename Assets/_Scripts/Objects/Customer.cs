@@ -425,7 +425,6 @@ public class Customer : MonoBehaviour
             {
                 gameManager.playerMoney += cost;
                 imageAbove.SetActive(true);
-                //imageAbove.GetComponent<Image>().;
                 imageAbove.transform.DOMoveY(imageAbove.transform.position.y+0.1f,1).SetEase(Ease.OutQuad);
                 state = NpcState.EatingPizza;
             }

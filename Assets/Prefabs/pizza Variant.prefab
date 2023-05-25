@@ -167,6 +167,7 @@ MonoBehaviour:
   onDisInteract:
     m_PersistentCalls:
       m_Calls: []
+  canInteract: 1
 --- !u!114 &218914891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,14 +180,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3630fb03e2930624aa7a9a05e5171991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCooked: 0
   ingredients: []
-  sauce: 0
+  isSauced: 0
+  size: 0
   dough: 0
   colliderExtents: {x: 0.1, y: 0.01, z: 0.1}
   maxDisstance: 0.06
   ingredientLayer:
     serializedVersion: 2
     m_Bits: 8
+  cookedMat: {fileID: 2100000, guid: 655dc81243f476646af8953ca25bd7e0, type: 2}
+  overCookedMat: {fileID: 2100000, guid: 321635bafb9f9d944b04f6ebb51f4ca6, type: 2}
 --- !u!114 &51178537263339375
 MonoBehaviour:
   m_ObjectHideFlags: 0

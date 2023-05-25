@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3132080224518362456}
   - component: {fileID: 4556857921123702726}
   - component: {fileID: 4644682475866586329}
-  - component: {fileID: 8407564252674963383}
+  - component: {fileID: 1809598099277003436}
   m_Layer: 3
   m_Name: PizzaDough
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 5135971041088005486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.125, y: 0.69, z: -9.375}
-  m_LocalScale: {x: 0.36756006, y: 0.44412282, z: 0.36756006}
+  m_LocalScale: {x: 0.42927337, y: 0.518691, z: 0.42927337}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2192,7 +2192,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1167
+  m_VersionIndex: 1176
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2329,6 +2329,7 @@ MonoBehaviour:
   onDisInteract:
     m_PersistentCalls:
       m_Calls: []
+  canInteract: 1
 --- !u!114 &4644682475866586329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2344,13 +2345,13 @@ MonoBehaviour:
   ItemSO: {fileID: 11400000, guid: d0a253795e023ef46a83e8fcd14cc155, type: 2}
   objectRigidbody: {fileID: 3132080224518362456}
   objectGrabPointTransform: {fileID: 0}
-  collider: {fileID: 8407564252674963383}
+  collider: {fileID: 0}
   insideSocket: 0
   moveSpeed: 20
   snapped: 0
   socketspeed: 0
---- !u!135 &8407564252674963383
-SphereCollider:
+--- !u!64 &1809598099277003436
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2359,6 +2360,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.09
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

@@ -9,4 +9,11 @@ public class ItemSO : ScriptableObject
     public GameObject model;
     public GameObject Prefab;
     public Sprite itemIcon;
+    public BaseIngredient type;
+}
+public enum BaseIngredient
+{
+    dough,
+    sauce,
+    none,
 }

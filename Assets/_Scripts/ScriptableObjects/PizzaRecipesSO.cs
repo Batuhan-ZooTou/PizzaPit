@@ -16,7 +16,7 @@ public enum DoughType
 {
     slim,
     medium,
-    fat,
+    thick,
 }
 [CreateAssetMenu(menuName ="ScriptableObjects/PizzaRecipes")]
 public class PizzaRecipesSO : ScriptableObject
