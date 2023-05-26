@@ -53,6 +53,7 @@ public class IngredientTins : MonoBehaviour
     void OnTakeFromPool(GameObject ingredient)
     {
         ingredient.gameObject.SetActive(true);
+        ingredient.GetComponent<ObjectGrabbable>().ingredientPoll = ingredientPoll;
     }
     void OnReturnedToPool(GameObject ingredient)
     {

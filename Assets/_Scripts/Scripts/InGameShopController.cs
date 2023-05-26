@@ -45,6 +45,7 @@ public class InGameShopController : MonoBehaviour
     }
     public void CloseShop()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         isShopOpen = false;
         shopCanvas.SetActive(false);
         shopCam.SetActive(false);

@@ -38,6 +38,7 @@ public class DoughMaker : MonoBehaviour
     void OnTakeFromPool(GameObject ingredient)
     {
         ingredient.gameObject.SetActive(true);
+        ingredient.GetComponent<ObjectGrabbable>().ingredientPoll = pizzaPool;
     }
     void OnReturnedToPool(GameObject ingredient)
     {
@@ -88,14 +89,14 @@ public class DoughMaker : MonoBehaviour
         Pizza pizza = pizzaPool.Get().GetComponent<Pizza>();
         pizza.transform.position = PlatePoint.position;
         pizza.transform.rotation = PlatePoint.rotation;
-        pizza.size = Size;
-        pizza.dough = Type;
-        pizza.SetPizzaLook();
-        Smasher.transform.DOMoveY(PlatePoint.transform.position.y + 0.2f, 3).OnComplete(()=> isplaying=false);
+        //pizza.size = Size;
+        //pizza.dough = Type;
+        pizza.SetPizzaLook(Size, Type);
+        Smasher.transform.DOMoveY(PlatePoint.transform.position.y + 0.4f, 3).OnComplete(()=> isplaying=false);
     }
     public void ChangeDoughType(Transform button)
     {
-        if (typeWheelTurning)
+        if (typeWheelTurning || isplaying)
         {
             return;
         }
@@ -118,7 +119,7 @@ public class DoughMaker : MonoBehaviour
     }
     public void ChangePizzaSize(Transform button)
     {
-        if (sizeWheelTurning)
+        if (sizeWheelTurning || isplaying)
         {
             return;
         }

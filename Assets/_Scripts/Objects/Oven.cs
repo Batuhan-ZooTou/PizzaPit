@@ -51,7 +51,7 @@ public class Oven : MonoBehaviour
                 Obj.enabled = true;
                 currentTimer = 0f;
                 myPizza.isCooked = Cooked.OverCooked;
-                myPizza.SetPizzaLook();
+                myPizza.CookPizza();
                 isPizzaCooking = false;
                 myPizza = null;
                 Obj = null;
@@ -60,7 +60,7 @@ public class Oven : MonoBehaviour
             {
                 Obj.enabled = true;
                 myPizza.isCooked = Cooked.Cooked;
-                myPizza.SetPizzaLook();
+                myPizza.CookPizza();
                 isPizzaCooking = false;
                 myPizza = null;
                 Obj = null;

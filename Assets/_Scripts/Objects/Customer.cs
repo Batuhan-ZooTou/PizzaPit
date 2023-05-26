@@ -144,6 +144,7 @@ public class Customer : MonoBehaviour
                 {
                     animator.SetBool("sit", false);
                     eatCounter = eatTime;
+                    pizza.GetComponent<ObjectGrabbable>().ingredientPoll.Release(pizza.gameObject);
                     destination = costumerManager.costumerSpawnPoint;
                     costumerManager.gameManager.emptyChairsToSit.Add(chair);
                     state = NpcState.LeavingStore;

@@ -149,7 +149,7 @@ public class Interactor : MonoBehaviour
         {
             if (mouseScrollY > 0f && Vector3.Distance(objectGrabPointTransform.position, cam.position) < interactDistance) // forward
             {
-                objectGrabPointTransform.position += cam.forward * Time.deltaTime * grabPointSpeed*0.1f;
+                objectGrabPointTransform.position += cam.forward * Time.deltaTime * grabPointSpeed*0.25f;
                 if (Vector3.Distance(objectGrabPointTransform.position, cam.position) > interactDistance)
                 {
                     objectGrabPointTransform.position = cam.position + cam.forward * interactDistance;
@@ -158,7 +158,7 @@ public class Interactor : MonoBehaviour
             }
             else if (mouseScrollY < 0f && Vector3.Distance(objectGrabPointTransform.position, cam.position) > holdDistance) // backwards
             {
-                objectGrabPointTransform.position -= cam.forward * Time.deltaTime * grabPointSpeed * 0.1f;
+                objectGrabPointTransform.position -= cam.forward * Time.deltaTime * grabPointSpeed * 0.25f;
                 if (Vector3.Distance(objectGrabPointTransform.position, cam.position) < holdDistance)
                 {
                     objectGrabPointTransform.position = cam.position + cam.forward * holdDistance;

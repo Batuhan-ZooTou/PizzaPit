@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class ObjectGrabbable : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class ObjectGrabbable : MonoBehaviour
     public float moveSpeed;
     public bool snapped;
     public float socketspeed;
+    public IObjectPool<GameObject> ingredientPoll;
+
     private void OnEnable()
     {
     }

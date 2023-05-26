@@ -45,18 +45,20 @@ public class Pizza : MonoBehaviour
             }
         }
     }
-    public void SetPizzaLook()
+    public void SetPizzaLook(PizzaSize _size,DoughType _type)
     {
+        size = _size;
+        dough = _type;
         switch (size)
         {
             case PizzaSize.small:
-                transform.localScale = new Vector3(0.6f,transform.localScale.y,0.6f);
+                transform.localScale = new Vector3(1.3f,transform.localScale.y,1.3f);
                 break;
             case PizzaSize.medium:
-                transform.localScale = new Vector3(0.8f,transform.localScale.y,0.8f);
+                transform.localScale = new Vector3(1.6f,transform.localScale.y,1.6f);
                 break;
             case PizzaSize.large:
-                transform.localScale = new Vector3(1f,transform.localScale.y,1f);
+                transform.localScale = new Vector3(1.9f,transform.localScale.y,1.9f);
                 break;
             default:
                 break;
@@ -64,17 +66,20 @@ public class Pizza : MonoBehaviour
         switch (dough)
         {
             case DoughType.slim:
-                transform.localScale = new Vector3(transform.localScale.x, 0.5f, transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x, 1f, transform.localScale.z);
                 break;
             case DoughType.medium:
-                transform.localScale = new Vector3(transform.localScale.x, 0.75f, transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x, 1.5f, transform.localScale.z);
                 break;
             case DoughType.thick:
-                transform.localScale = new Vector3(transform.localScale.x, 1f, transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x, 2f, transform.localScale.z);
                 break;
             default:
                 break;
         }
+    }
+    public void CookPizza()
+    {
         switch (isCooked)
         {
             case Cooked.notCooked:
