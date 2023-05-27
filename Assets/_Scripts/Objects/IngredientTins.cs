@@ -47,7 +47,7 @@ public class IngredientTins : MonoBehaviour
     }
     GameObject CreateIngredient()
     {
-        var ingredient = Instantiate(prefab,transform.position,transform.rotation,this.transform);
+        var ingredient = Instantiate(prefab,transform.position,transform.rotation,null);
         return ingredient;
     }
     void OnTakeFromPool(GameObject ingredient)

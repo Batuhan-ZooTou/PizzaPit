@@ -34,7 +34,11 @@ public class Pizza : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out addedIngredient))
             {
-                if (addedIngredient.ItemSO!=null)
+                if (addedIngredient.ItemSO==null)
+                {
+                    return;
+                }
+                if (addedIngredient.ItemSO.type==BaseIngredient.none)
                 {
                     ingredients.Add(addedIngredient.ItemSO);
                     Instantiate(addedIngredient.ItemSO.model, transform.position, Quaternion.Euler(Vector3.zero), transform);

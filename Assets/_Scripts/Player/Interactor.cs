@@ -110,7 +110,7 @@ public class Interactor : MonoBehaviour
                 GameObject ingredient = Interactable.GetComponent<IngredientTins>().ingredientPoll.Get();
                 ingredient.transform.position = objectGrabPointTransform.position;
                 ingredient.TryGetComponent(out grabbedObject);
-                Physics.IgnoreCollision(hit.collider.GetComponent<Collider>(), grabbedObject.GetComponent<Collider>(), true);
+                //Physics.IgnoreCollision(hit.collider.GetComponent<Collider>(), grabbedObject.GetComponent<Collider>(), true);
                 Physics.IgnoreCollision(player, grabbedObject.GetComponent<Collider>(), true);
                 objectGrabPointTransform.position = defaultGrabPoint;
                 grabbedObject.Grab(objectGrabPointTransform,this);

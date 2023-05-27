@@ -78,7 +78,7 @@ public class DoughMaker : MonoBehaviour
         }
         isplaying = true;
         Smasher.transform.DOMoveY(PlatePoint.transform.position.y, 3).OnComplete(() => OnSmash());
-        valve.DOBlendableRotateBy(new Vector3(0, 0, -180), 3).OnComplete(() => valve.DOBlendableRotateBy(new Vector3(0, 0, 180), 3));
+        valve.DOBlendableLocalRotateBy(new Vector3(0, 180, 0), 3).OnComplete(() => valve.DOBlendableRotateBy(new Vector3(0, -180, 0), 3));
     }
 
     public void OnSmash()
@@ -101,7 +101,7 @@ public class DoughMaker : MonoBehaviour
             return;
         }
         typeWheelTurning = true;
-        button.DOBlendableRotateBy(new Vector3(-120, 0, 0), 1).OnComplete(() => typeWheelTurning = false);
+        button.DOBlendableLocalRotateBy(new Vector3(0, -120, 0), 1).OnComplete(() => typeWheelTurning = false);
         switch (Type)
         {
             case DoughType.slim:
@@ -124,7 +124,7 @@ public class DoughMaker : MonoBehaviour
             return;
         }
         sizeWheelTurning = true;
-        button.DOBlendableRotateBy(new Vector3(-120, 0, 0), 1).OnComplete(() => sizeWheelTurning = false);
+        button.DOBlendableLocalRotateBy(new Vector3(0, -120, 0), 1).OnComplete(() => sizeWheelTurning = false);
         switch (Size)
         {
             case PizzaSize.small:
