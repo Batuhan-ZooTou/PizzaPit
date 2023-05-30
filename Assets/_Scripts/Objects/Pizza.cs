@@ -19,6 +19,7 @@ public class Pizza : MonoBehaviour
     public Cooked isCooked;
     public List<ItemSO> ingredients;
     public bool isSauced;
+    public bool insideBox;
     public PizzaSize size;
     public DoughType dough;
     [SerializeField] Vector3 colliderExtents;

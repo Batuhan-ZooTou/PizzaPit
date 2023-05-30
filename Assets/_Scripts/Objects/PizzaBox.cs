@@ -30,9 +30,11 @@ public class PizzaBox : MonoBehaviour
                     Obj.Drop();
                     Obj.objectRigidbody.velocity = Vector3.zero;
                     myPizza.gameObject.transform.position = transform.position;
+                    myPizza.gameObject.transform.rotation = transform.rotation;
                     myPizza.transform.SetParent(transform);
                     myPizza.GetComponent<Rigidbody>().useGravity = false;
                     myPizza.GetComponent<Collider>().isTrigger = true;
+                    myPizza.insideBox = true;
                 }
             }
         }
@@ -46,6 +48,9 @@ public class PizzaBox : MonoBehaviour
         }
         else
         {
+            myPizza.GetComponent<Rigidbody>().useGravity = true;
+            myPizza.GetComponent<Collider>().isTrigger = false;
+            myPizza.insideBox = false;
             myPizza = null;
         }
     }
@@ -55,12 +60,18 @@ public class PizzaBox : MonoBehaviour
         if (isOpen)
         {
             box.DOBlendableLocalRotateBy(new Vector3(75, 0, 0), 1f);
-
+            if (myPizza != null)
+            {
+                myPizza.GetComponent<Collider>().enabled = true;
+            }
         }
         else
         {
             box.DOBlendableLocalRotateBy(new Vector3(-75, 0, 0), 1f);
-
+            if (myPizza!=null)
+            {
+                myPizza.GetComponent<Collider>().enabled = false;
+            }
         }
     }
     private void OnDrawGizmosSelected()

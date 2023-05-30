@@ -37,7 +37,7 @@ public class SauceMachine : MonoBehaviour
             {
                 if (hit.collider.TryGetComponent(out myPizza))
                 {
-                    if (myPizza.isSauced)
+                    if (myPizza.isSauced || myPizza.insideBox)
                     {
                         myPizza = null;
                         return;

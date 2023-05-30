@@ -27,7 +27,7 @@ public class Oven : MonoBehaviour
                 {
                     if (hit.collider.TryGetComponent(out myPizza))
                     {
-                        if (myPizza.isCooked!=Cooked.notCooked)
+                        if (myPizza.isCooked!=Cooked.notCooked ||myPizza.insideBox)
                         {
                             return;
                         }

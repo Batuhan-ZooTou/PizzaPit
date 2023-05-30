@@ -9,6 +9,7 @@ public class ObjectGrabbable : MonoBehaviour
     public Rigidbody objectRigidbody;
     public Transform objectGrabPointTransform;
     [SerializeField] private Collider collider;
+    [SerializeField] private Collider secondaryCollider;
     private Interactor player;
     public bool insideSocket;
     public float moveSpeed;
@@ -30,6 +31,10 @@ public class ObjectGrabbable : MonoBehaviour
             //socket.Close();
 
         }
+        if (secondaryCollider!=null)
+        {
+            Physics.IgnoreCollision(player.GetComponent<Collider>(), secondaryCollider, true);
+        }
         this.objectGrabPointTransform = objectGrabPointTransform;
             objectRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
         objectRigidbody.useGravity = false;
@@ -45,7 +50,11 @@ public class ObjectGrabbable : MonoBehaviour
             objectRigidbody.velocity = Vector3.zero;
 
         }
-            objectRigidbody.constraints = RigidbodyConstraints.None;
+        if (secondaryCollider != null)
+        {
+            Physics.IgnoreCollision(player.GetComponent<Collider>(), secondaryCollider, false);
+        }
+        objectRigidbody.constraints = RigidbodyConstraints.None;
         objectRigidbody.useGravity = true;
     }
     public void CostumerHold(Transform point)
