@@ -403,6 +403,10 @@ public class Customer : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.GetComponent<Doors>()!=null)
+        {
+            other.GetComponent<Doors>().Open();
+        }
         if (state!=NpcState.WaitingForPizza)
         {
             return;
@@ -430,6 +434,13 @@ public class Customer : MonoBehaviour
                 state = NpcState.EatingPizza;
             }
 
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<Doors>() != null)
+        {
+            other.GetComponent<Doors>().Open();
         }
     }
     public void FixOutline()

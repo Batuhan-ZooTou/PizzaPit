@@ -105,6 +105,15 @@ public class Pizza : MonoBehaviour
             Debug.Log("ReadyToServe");
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Sauce"))
+        {
+            isSauced = true;
+            transform.GetChild(0).gameObject.SetActive(true);
+            Destroy(collision.gameObject);
+        }
+    }
     private void OnDrawGizmosSelected()
     {
         Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);

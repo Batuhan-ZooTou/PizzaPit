@@ -78,7 +78,7 @@ public class DoughMaker : MonoBehaviour
         }
         isplaying = true;
         Smasher.transform.DOMoveY(PlatePoint.transform.position.y, 3).OnComplete(() => OnSmash());
-        valve.DOBlendableLocalRotateBy(new Vector3(0, 180, 0), 3).OnComplete(() => valve.DOBlendableRotateBy(new Vector3(0, -180, 0), 3));
+        valve.DOBlendableLocalRotateBy(new Vector3(0, 180, 0), 3).OnComplete(() => valve.DOBlendableLocalRotateBy(new Vector3(0, -180, 0), 3));
     }
 
     public void OnSmash()
