@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public enum Cooked
 {
@@ -28,6 +30,9 @@ public class Pizza : MonoBehaviour
     ObjectGrabbable addedIngredient;
     public Material cookedMat;
     public Material overCookedMat;
+    public GameObject IngredientUI;
+    public List<ItemSO> ingredientsTypes;
+    public List<ItemSO> ingredientCounts;
 
     private void Update()
     {
@@ -35,7 +40,7 @@ public class Pizza : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out addedIngredient))
             {
-                if (addedIngredient.ItemSO==null)
+                if (addedIngredient.ItemSO==null || insideBox)
                 {
                     return;
                 }
@@ -44,11 +49,56 @@ public class Pizza : MonoBehaviour
                     ingredients.Add(addedIngredient.ItemSO);
                     Instantiate(addedIngredient.ItemSO.model, transform.position, Quaternion.Euler(Vector3.zero), transform);
                     addedIngredient.Drop();
+                    OnIngredientAddedUpdateUI();
                     hit.collider.gameObject.SetActive(false);
                     
                 }
             }
         }
+    }
+    void OnIngredientAddedUpdateUI()
+    {
+        if (ingredients==null)
+        {
+            ingredientsTypes.Add(addedIngredient.ItemSO);
+            GameObject temp = IngredientUI.transform.GetChild(0).gameObject;
+            temp.SetActive(true);
+            temp.GetComponent<Image>().sprite = addedIngredient.ItemSO.itemIcon;
+            temp.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
+            return;
+        }
+        if (ingredientsTypes.Contains(addedIngredient.ItemSO))
+        {
+            for (int i = 0; i < ingredientsTypes.Count; i++)
+            {
+                if (addedIngredient.ItemSO== ingredientsTypes[i])
+                {
+                    ingredientCounts.Add(addedIngredient.ItemSO);
+                    IngredientUI.transform.GetChild(i).gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = GetCount().ToString();
+                    return;
+                }
+            }
+        }
+        else
+        {
+            ingredientsTypes.Add(addedIngredient.ItemSO);
+            GameObject temp = IngredientUI.transform.GetChild(ingredientsTypes.Count - 1).gameObject;
+            temp.SetActive(true);
+            temp.GetComponent<Image>().sprite = addedIngredient.ItemSO.itemIcon;
+            temp.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
+        }
+    }
+    int GetCount()
+    {
+        int count=1;
+        foreach (var item in ingredientCounts)
+        {
+            if (addedIngredient.ItemSO==item)
+            {
+                count++;
+            }
+        }
+        return count;
     }
     public void SetPizzaLook(PizzaSize _size,DoughType _type)
     {

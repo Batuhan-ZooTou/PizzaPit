@@ -117,6 +117,22 @@ public class Interactor : MonoBehaviour
             }
         }
     }
+    public void GrabBox()
+    {
+        if (grabbedObject == null)
+        {
+            if (Interactable.GetComponent<BoxHolder>().boxCount > 0)
+            {
+                GameObject box = Interactable.GetComponent<BoxHolder>().boxPoll.Get();
+                box.GetComponent<Outline>().enabled = true;
+                box.transform.position = objectGrabPointTransform.position;
+                box.TryGetComponent(out grabbedObject);
+                Physics.IgnoreCollision(player, grabbedObject.GetComponent<Collider>(), true);
+                objectGrabPointTransform.position = defaultGrabPoint;
+                grabbedObject.Grab(objectGrabPointTransform, this);
+            }
+        }
+    }
     public void GrabIngredient(ShopBasket basket)
     {
         if (grabbedObject == null)

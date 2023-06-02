@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class PizzaBox : MonoBehaviour
 {
-    bool isOpen=true;
+    bool isOpen=false;
     Transform box;
     [SerializeField] Vector3 colliderExtents;
     [SerializeField] float maxDisstance;
@@ -16,7 +16,10 @@ public class PizzaBox : MonoBehaviour
     {
         box = transform.GetChild(0).transform;
     }
-
+    private void OnEnable()
+    {
+        transform.GetChild(0).gameObject.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -45,6 +48,7 @@ public class PizzaBox : MonoBehaviour
         if (myPizza.GetComponent<ObjectGrabbable>().objectGrabPointTransform == null)
         {
             myPizza.gameObject.transform.position = transform.position;
+            myPizza.gameObject.transform.rotation = transform.rotation;
         }
         else
         {
