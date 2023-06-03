@@ -34,6 +34,7 @@ public class Oven : MonoBehaviour
                         Obj.Drop();
                         Obj.objectRigidbody.velocity = Vector3.zero;
                         myPizza.gameObject.transform.position = targetTransform.position;
+                        myPizza.gameObject.transform.rotation = targetTransform.rotation;
                         isPizzaCooking = true;
                         currentTimer = cookingTime;
                         Obj.GetComponent<Interactable>().canInteract = false;

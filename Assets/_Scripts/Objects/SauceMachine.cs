@@ -46,6 +46,7 @@ public class SauceMachine : MonoBehaviour
                     Obj.Drop();
                     Obj.objectRigidbody.velocity = Vector3.zero;
                     myPizza.gameObject.transform.position = PizzaPoint.position;
+                    myPizza.gameObject.transform.rotation = PizzaPoint.rotation;
                 }
             }
         }

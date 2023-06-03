@@ -12,9 +12,15 @@ public class CostumerManager : MonoBehaviour
     public Transform costumerSpawnPoint;
     public Transform[] CostumerLinePoints;
     public int currentEmptyLine;
+    string[] FemaleNames;
+    string[] MaleNames;
+    public TextAsset MaleList;
+    public TextAsset FemaleList;
     // Start is called before the first frame update
     private void Awake()
     {
+        FemaleNames = FemaleList.text.Split("\n");
+        MaleNames = MaleList.text.Split("\n");
         costumerPool = new ObjectPool<Customer>(CreateCostumer, OnTakeFromPool, OnReturnedToPool, null, true, 10);
         StartCoroutine(Delay());
     }
@@ -26,6 +32,17 @@ public class CostumerManager : MonoBehaviour
     void OnTakeFromPool(Customer customer)
     {
         customer.gameObject.SetActive(true);
+        int rng = Random.Range(0, 7);
+        if (rng<4)
+        {
+            customer.NameTag.text = MaleNames[Random.Range(0, MaleNames.Length)];
+        }
+        else
+        {
+            customer.NameTag.text = FemaleNames[Random.Range(0, FemaleNames.Length)];
+
+        }
+        customer.transform.GetChild(rng).gameObject.SetActive(true);
         currentEmptyLine++;
         CostumersOnScene.Add(customer);
         customer.gameManager = gameManager;
@@ -35,9 +52,11 @@ public class CostumerManager : MonoBehaviour
         customer.destination = CostumerLinePoints[currentEmptyLine-1];
         customer.currentLine = currentEmptyLine;
         customer.onLine = true;
+
     }
     public void OnReturnedToPool(Customer customer)
     {
+        gameManager.orderInfos.Remove(customer.orderInfo);
         CostumersOnScene.Remove(customer);
         customer.gameManager = null;
         customer.onLine = false;

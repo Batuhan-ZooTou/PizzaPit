@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine.AI;
 using DG.Tweening;
 using UnityEngine.UI;
+using TMPro;
 public enum NpcState
 {
     WalkingToLine,
@@ -14,9 +15,28 @@ public enum NpcState
     EatingPizza,
     LeavingStore,
 }
+[System.Serializable]
+public class OrderInfo
+{
+    public PizzaRecipesSO order;
+    public List<ItemSO> extras =new List<ItemSO>();
+    public PizzaSize pizzaSize;
+    public DoughType doughType;
+    public float cost;
+    public OrderInfo(PizzaRecipesSO _order, List<ItemSO> _extras, PizzaSize _pizzaSize, DoughType _doughType, float _cost)
+    {
+        order = _order;
+        extras = _extras;
+        pizzaSize = _pizzaSize;
+        doughType = _doughType;
+        cost = _cost;
+    }
+
+}
 public class Customer : MonoBehaviour
 {
     [Header("Order")]
+    public OrderInfo orderInfo;
     public Pizza pizza;
     public PizzaRecipesSO order;
     public List<ItemSO> extras =new List<ItemSO>();
@@ -35,6 +55,7 @@ public class Customer : MonoBehaviour
     private Outline childOutline;
 
     [Header("Informations")]
+    public TextMeshProUGUI NameTag;
     public GameObject imageAbove;
     public Transform pizzaHoldPoint;
     public Transform destination;
@@ -54,8 +75,8 @@ public class Customer : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        int rng = Random.Range(0,8);
-        transform.GetChild(rng).gameObject.SetActive(true);
+        int rng = Random.Range(0,7);
+       // transform.GetChild(rng).gameObject.SetActive(true);
         outline = GetComponent<Outline>();
         childOutline = transform.GetChild(rng).gameObject.GetComponent<Outline>();
     }
@@ -68,6 +89,7 @@ public class Customer : MonoBehaviour
         eatCounter = eatTime;
         waitCounter = waitTime;
         pizzaWaitCounter = pizzaWaitTime;
+        
     }
     private void Update()
     {
@@ -389,6 +411,7 @@ public class Customer : MonoBehaviour
         if (currentLine==1 && hasOrder && state==NpcState.WaitingToOrder)
         {
             GetComponent<Interactable>().canInteract = false;
+            gameManager.orderInfos.Add(orderInfo);
             state = NpcState.WalkingToChair;
             onLine = false;
             hasOrder = false;
@@ -478,5 +501,6 @@ public class Customer : MonoBehaviour
         CalculateTotalCost();
         GetRandomPizzaSize();
         GetRandomDoughType();
+        orderInfo = new OrderInfo(order, extras, pizzaSize, doughType, cost);
     }
 }
