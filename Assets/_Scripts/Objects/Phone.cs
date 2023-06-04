@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Phone : MonoBehaviour
 {
+    [SerializeField]private DeliveryGuy deliveryGuy;
     [SerializeField]private GameManager gameManager;
     [SerializeField] private int maxExtraCount;
     [SerializeField] public OrderInfo orderInfo;
@@ -13,9 +14,11 @@ public class Phone : MonoBehaviour
     private DoughType doughType;
     private float cost;
     private bool isRinging;
-
+    string[] NpcNames;
+    public TextAsset MixList;
     private void Start()
     {
+        NpcNames = MixList.text.Split("\n");
         Invoke("RingPhone", Random.Range(minTime,maxTime));
     }
     public void OnInteract()
@@ -23,8 +26,9 @@ public class Phone : MonoBehaviour
         if (isRinging)
         {
             isRinging = false;
-            orderInfo = new OrderInfo(GetRandomRecipe(), GetRandomExtras(), GetRandomPizzaSize(), GetRandomDoughType(), CalculateTotalCost());
-            gameManager.orderInfos.Add(orderInfo);
+            orderInfo = new OrderInfo(GetRandomRecipe(), GetRandomExtras(), GetRandomPizzaSize(), GetRandomDoughType(), CalculateTotalCost(), NpcNames[Random.Range(0, NpcNames.Length)]);
+            deliveryGuy.orderInfos=orderInfo;
+            deliveryGuy.GetComponent<Interactable>().canInteract = true;
             GetComponent<Interactable>().canInteract = false;
             Invoke("RingPhone", Random.Range(minTime, maxTime));
         }

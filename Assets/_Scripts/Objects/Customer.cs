@@ -23,13 +23,15 @@ public class OrderInfo
     public PizzaSize pizzaSize;
     public DoughType doughType;
     public float cost;
-    public OrderInfo(PizzaRecipesSO _order, List<ItemSO> _extras, PizzaSize _pizzaSize, DoughType _doughType, float _cost)
+    public string costumerName;
+    public OrderInfo(PizzaRecipesSO _order, List<ItemSO> _extras, PizzaSize _pizzaSize, DoughType _doughType, float _cost,string _costumerName)
     {
         order = _order;
         extras = _extras;
         pizzaSize = _pizzaSize;
         doughType = _doughType;
         cost = _cost;
+        costumerName = _costumerName;
     }
 
 }
@@ -501,6 +503,6 @@ public class Customer : MonoBehaviour
         CalculateTotalCost();
         GetRandomPizzaSize();
         GetRandomDoughType();
-        orderInfo = new OrderInfo(order, extras, pizzaSize, doughType, cost);
+        orderInfo = new OrderInfo(order, extras, pizzaSize, doughType, cost,NameTag.text);
     }
 }

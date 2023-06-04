@@ -10,7 +10,7 @@ public class PizzaBox : MonoBehaviour
     [SerializeField] Vector3 colliderExtents;
     [SerializeField] float maxDisstance;
     public LayerMask doughLayer;
-    Pizza myPizza;
+    [HideInInspector] public Pizza myPizza;
     // Start is called before the first frame update
     void Start()
     {

@@ -8049,6 +8049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829bd0a884738254c8d356533bf0d9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 0, z: 90}
 --- !u!114 &850786507719468998
 MonoBehaviour:
   m_ObjectHideFlags: 0

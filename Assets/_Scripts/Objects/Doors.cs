@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Doors : MonoBehaviour
 {
     bool isOpen;
+    public Vector3 rotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +21,12 @@ public class Doors : MonoBehaviour
         isOpen = !isOpen;
         if (isOpen)
         {
-            transform.DOBlendableLocalRotateBy(new Vector3(0, 0, 90), 1f);
+            transform.DOBlendableLocalRotateBy(rotation, 1f);
 
         }
         else
         {
-            transform.DOBlendableLocalRotateBy(new Vector3(0, 0, -90), 1f);
+            transform.DOBlendableLocalRotateBy(-rotation, 1f);
 
         }
     }
