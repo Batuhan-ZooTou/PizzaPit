@@ -12,9 +12,9 @@ public class CanvasController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            isCanvasVisible = !isCanvasVisible; // Canvas'in görünürlüðünü tersine çevir
+            isCanvasVisible = !isCanvasVisible;
 
-            canvas.SetActive(isCanvasVisible); // Canvas'in görünürlüðünü ayarla
+            canvas.SetActive(isCanvasVisible);
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
