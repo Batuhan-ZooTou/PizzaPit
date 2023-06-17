@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Mushroom
   m_EditorClassIdentifier: 
   cost: 15
+  ingName: Mushroom
   model: {fileID: 6605751110129008377, guid: f6f4e9f15e7e169499a6d6c36e7e8456, type: 3}
   Prefab: {fileID: 8783616540744478457, guid: 8a7904e7df8c77944bcf3747cc5ecc35, type: 3}
   itemIcon: {fileID: 21300000, guid: 9f370cc74ecdf49ab83ae206e29fb5e7, type: 3}

@@ -6,6 +6,7 @@ using UnityEngine;
 public class ItemSO : ScriptableObject
 {
     public int cost;
+    public string ingName;
     public GameObject model;
     public GameObject Prefab;
     public Sprite itemIcon;

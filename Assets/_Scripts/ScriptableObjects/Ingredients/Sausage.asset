@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608d40b85adb6304c9741bd7e0a7b3d8, type: 3}
   m_Name: Sausage
   m_EditorClassIdentifier: 
-  cost: 20
+  cost: 25
+  ingName: Sausage
   model: {fileID: 8282220191004287002, guid: add3e1e29314f6144a8a7d713489fcd8, type: 3}
   Prefab: {fileID: 6960392007298357771, guid: ed88abe28a54c4e4685c070b4a8c3558, type: 3}
   itemIcon: {fileID: 21300000, guid: 214899e922fab4e329f4493aca713bc8, type: 3}

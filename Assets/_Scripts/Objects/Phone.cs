@@ -26,7 +26,10 @@ public class Phone : MonoBehaviour
         if (isRinging)
         {
             isRinging = false;
-            orderInfo = new OrderInfo(GetRandomRecipe(), GetRandomExtras(), GetRandomPizzaSize(), GetRandomDoughType(), CalculateTotalCost(), NpcNames[Random.Range(0, NpcNames.Length)]);
+            orderInfo = new OrderInfo(GetRandomRecipe(), GetRandomExtras(), GetRandomPizzaSize(), GetRandomDoughType(), CalculateTotalCost(), "Delivery");
+            gameManager.orderInfos.Add(orderInfo);
+            gameManager.UpdateOrderListUI(orderInfo);
+            //NpcNames[Random.Range(0, NpcNames.Length)]
             deliveryGuy.orderInfos=orderInfo;
             deliveryGuy.GetComponent<Interactable>().canInteract = true;
             GetComponent<Interactable>().canInteract = false;

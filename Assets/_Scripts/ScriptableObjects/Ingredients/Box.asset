@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Box
   m_EditorClassIdentifier: 
   cost: 10
+  ingName: Box
   model: {fileID: 8551330367734848515, guid: cdedd87eec65e2b4a92b2e59d9ad449e, type: 3}
   Prefab: {fileID: 190854802058628246, guid: 33fd3013b869ecc4498d185f0a734e9a, type: 3}
   itemIcon: {fileID: 21300000, guid: ed78627e553e072469007a3a384e7b1b, type: 3}

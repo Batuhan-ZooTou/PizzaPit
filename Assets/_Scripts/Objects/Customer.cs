@@ -410,10 +410,11 @@ public class Customer : MonoBehaviour
     }
     public void OnInteract()
     {
-        if (currentLine==1 && hasOrder && state==NpcState.WaitingToOrder)
+        if (currentLine==1 && hasOrder && state==NpcState.WaitingToOrder && gameManager.orderInfos.Count<8)
         {
             GetComponent<Interactable>().canInteract = false;
             gameManager.orderInfos.Add(orderInfo);
+            gameManager.UpdateOrderListUI(orderInfo);
             state = NpcState.WalkingToChair;
             onLine = false;
             hasOrder = false;

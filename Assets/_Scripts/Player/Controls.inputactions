@@ -87,6 +87,24 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "RecipeList",
+                    "type": "Button",
+                    "id": "e08dd86d-fd89-4c73-b43c-b1cfc9d9a623",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OrderList",
+                    "type": "Button",
+                    "id": "b378157f-cdbd-41d2-97fc-739d1d7d9328",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Sprint",
                     "type": "Button",
                     "id": "4ccfdcc3-364f-423b-bfcc-5c064095942c",
@@ -369,6 +387,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Shop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa80f8ad-bd89-4a83-8fc9-5f479519da6d",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "RecipeList",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48eb3eee-3830-48b8-9eef-d089043da4cd",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "OrderList",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

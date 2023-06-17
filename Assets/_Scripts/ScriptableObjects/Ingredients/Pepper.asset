@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608d40b85adb6304c9741bd7e0a7b3d8, type: 3}
   m_Name: Pepper
   m_EditorClassIdentifier: 
-  cost: 15
+  cost: 20
+  ingName: Pepper
   model: {fileID: 8806224367661409038, guid: c1d07a6e4a9e6d941b6435b66dd2bfd5, type: 3}
   Prefab: {fileID: 204776602605300489, guid: 4887ae54c7ca4b8409289cb247d64cd5, type: 3}
   itemIcon: {fileID: 21300000, guid: 72fb4da6144f94328b6ed2cf005c308b, type: 3}

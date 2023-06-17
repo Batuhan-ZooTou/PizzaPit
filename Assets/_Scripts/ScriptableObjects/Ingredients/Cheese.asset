@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cheese
   m_EditorClassIdentifier: 
   cost: 20
+  ingName: Cheese
   model: {fileID: 2905140374294000644, guid: 35147293cbbf4e7458d5d6b1c7844ffe, type: 3}
   Prefab: {fileID: 4381326268162473850, guid: 5650d927b410d4b46b802c8099410add, type: 3}
   itemIcon: {fileID: 21300000, guid: 2e3e41eb8cc9147069f98d093b5190d7, type: 3}

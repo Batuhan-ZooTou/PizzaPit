@@ -37,6 +37,7 @@ public class Interactor : MonoBehaviour
     {
         mouseScrollY = context.ReadValue<Vector2>().y;
     }
+    
     public void OnLMB(InputAction.CallbackContext context)
     {
         if (context.started)
