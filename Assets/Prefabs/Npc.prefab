@@ -2112,6 +2112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd731001b7118e46abfd2694f7168bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orderInfo:
+    order: {fileID: 0}
+    extras: []
+    pizzaSize: 0
+    doughType: 0
+    cost: 0
+    costumerName: 
   pizza: {fileID: 0}
   order: {fileID: 0}
   extras: []
@@ -2131,9 +2138,9 @@ MonoBehaviour:
   onLine: 0
   hasOrder: 0
   state: 0
-  eatTime: 5
-  waitTime: 15
-  pizzaWaitTime: 60
+  eatTime: 15
+  waitTime: 30
+  pizzaWaitTime: 75
 --- !u!114 &6304120476646460406
 MonoBehaviour:
   m_ObjectHideFlags: 0

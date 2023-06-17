@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mediteranean
   m_EditorClassIdentifier: 
   pizzaName: Mediteranean
-  prefab: {fileID: 0}
+  logo: {fileID: 21300000, guid: 3efb2e872e53b7f41b39093cbb055e5a, type: 3}
   mustHave:
   - {fileID: 11400000, guid: 883e4416a23a2104d98243e3fefc903e, type: 2}
   - {fileID: 11400000, guid: 3e5deb8fdebc23e4a90d37ea422077db, type: 2}

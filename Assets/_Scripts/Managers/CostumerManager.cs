@@ -76,14 +76,17 @@ public class CostumerManager : MonoBehaviour
     IEnumerator Delay()
     {
         SpawnCostumer();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(15);
         SpawnCostumer();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(30);
         SpawnCostumer();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(60);
         SpawnCostumer();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(120);
         SpawnCostumer();
+        yield return new WaitForSeconds(240);
+        SpawnCostumer();
+        
     }
     public void RealignCostumersOnLine(int lineNo)
     {

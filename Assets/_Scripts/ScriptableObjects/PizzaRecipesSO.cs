@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public enum Ingredients
 {
     Cheese,
@@ -22,7 +21,7 @@ public enum DoughType
 public class PizzaRecipesSO : ScriptableObject
 {
     public string pizzaName;
-    public GameObject prefab;
+    public Sprite logo;
     public List<ItemSO> mustHave;
     
     public float cost;

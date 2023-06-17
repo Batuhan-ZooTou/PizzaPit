@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ricotta
   m_EditorClassIdentifier: 
   pizzaName: Ricotta
-  prefab: {fileID: 0}
+  logo: {fileID: 21300000, guid: 3c4971cdafafa16428b1d7191f2561e2, type: 3}
   mustHave:
   - {fileID: 11400000, guid: 883e4416a23a2104d98243e3fefc903e, type: 2}
   - {fileID: 11400000, guid: 9956a00a6af3898499fff66066ef8d1b, type: 2}

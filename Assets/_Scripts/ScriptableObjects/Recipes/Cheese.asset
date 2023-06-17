@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cheese
   m_EditorClassIdentifier: 
   pizzaName: Cheese
-  prefab: {fileID: 0}
+  logo: {fileID: 21300000, guid: 6213c235d1c46a248a6ee9c604ea3f70, type: 3}
   mustHave:
   - {fileID: 11400000, guid: 929e02831d4e4e64bba99744d79059c1, type: 2}
   - {fileID: 11400000, guid: fc852160707e6bb49ac0680073ca1b59, type: 2}

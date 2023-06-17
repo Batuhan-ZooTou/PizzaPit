@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pepperoni
   m_EditorClassIdentifier: 
   pizzaName: Pepperoni
-  prefab: {fileID: 0}
+  logo: {fileID: 21300000, guid: e8f259f0a69fe814f8d605a7eb5a7920, type: 3}
   mustHave:
   - {fileID: 11400000, guid: 929e02831d4e4e64bba99744d79059c1, type: 2}
   - {fileID: 11400000, guid: f3e7adb1baeb8124eb8d63dc7c4aa4f3, type: 2}

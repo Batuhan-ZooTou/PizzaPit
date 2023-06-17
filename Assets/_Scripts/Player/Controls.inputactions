@@ -60,15 +60,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "c5c9cd02-f915-4030-b2db-50650f1eba57",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Crouch",
                     "type": "Button",
                     "id": "e5de43aa-4f2c-4898-b925-a43cf11646b9",
@@ -99,6 +90,15 @@
                     "name": "OrderList",
                     "type": "Button",
                     "id": "b378157f-cdbd-41d2-97fc-739d1d7d9328",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Escape",
+                    "type": "Button",
+                    "id": "7e6b10f1-a22f-4491-82d7-834b7646281e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -304,17 +304,6 @@
                 },
                 {
                     "name": "",
-                    "id": "dbdc3284-8e46-4ad3-97cc-56e22f68b127",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b8e68424-e339-426b-9c6b-a608db6125c0",
                     "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
@@ -409,6 +398,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "OrderList",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cce9fa0-291e-4d30-8e97-f71695917544",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

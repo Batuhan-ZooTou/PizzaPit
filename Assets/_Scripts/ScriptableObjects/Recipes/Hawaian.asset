@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hawaian
   m_EditorClassIdentifier: 
   pizzaName: Hawaian
-  prefab: {fileID: 0}
+  logo: {fileID: 21300000, guid: 96b3a1430128a3f43b76be89471caae3, type: 3}
   mustHave:
   - {fileID: 11400000, guid: 9956a00a6af3898499fff66066ef8d1b, type: 2}
   - {fileID: 11400000, guid: f3e7adb1baeb8124eb8d63dc7c4aa4f3, type: 2}

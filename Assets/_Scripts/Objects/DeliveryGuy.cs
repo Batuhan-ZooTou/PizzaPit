@@ -167,7 +167,8 @@ public class DeliveryGuy : MonoBehaviour
         {
             pleased++;
         }
-        gameManager.playerExperience += orderInfos.order.expEarn * pleased;
+        gameManager.RemoveFromOrderListUI(orderInfos);
+        gameManager.UpdateExpBar(orderInfos.order.expEarn * pleased);
         if (pleased>=0)
         {
             gameManager.playerMoney += orderInfos.cost;

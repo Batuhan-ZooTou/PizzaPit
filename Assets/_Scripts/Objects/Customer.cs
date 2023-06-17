@@ -155,6 +155,7 @@ public class Customer : MonoBehaviour
                 }
                 if (pizzaWaitCounter<=0)
                 {
+                    gameManager.RemoveFromOrderListUI(orderInfo);
                     destination = costumerManager.costumerSpawnPoint;
                     pizzaWaitCounter = pizzaWaitTime;
                     animator.SetBool("sit", false);
@@ -168,9 +169,11 @@ public class Customer : MonoBehaviour
                 {
                     animator.SetBool("sit", false);
                     eatCounter = eatTime;
-                    pizza.GetComponent<ObjectGrabbable>().ingredientPoll.Release(pizza.gameObject);
+                    //pizza.GetComponent<ObjectGrabbable>().ingredientPoll.Release(pizza.gameObject);
+                    Destroy(pizza.gameObject);
                     destination = costumerManager.costumerSpawnPoint;
                     costumerManager.gameManager.emptyChairsToSit.Add(chair);
+                    gameManager.RemoveFromOrderListUI(orderInfo);
                     state = NpcState.LeavingStore;
                     imageAbove.transform.DOMoveY(imageAbove.transform.position.y - 0.1f, 1).SetEase(Ease.OutQuad).OnComplete(()=> imageAbove.SetActive(false));
 
@@ -440,7 +443,7 @@ public class Customer : MonoBehaviour
         if (other.TryGetComponent(out pizza))
         {
             TakePizza();
-            gameManager.playerExperience += order.expEarn * pleased;
+            gameManager.UpdateExpBar(order.expEarn * pleased);
             pizza.GetComponent<ObjectGrabbable>().objectRigidbody.velocity = Vector3.zero;
             pizza.GetComponent<ObjectGrabbable>().Drop();
             pizza.transform.position = chair.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.position;

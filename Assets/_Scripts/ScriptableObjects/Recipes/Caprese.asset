@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Caprese
   m_EditorClassIdentifier: 
   pizzaName: Caprese
-  prefab: {fileID: 0}
+  logo: {fileID: 21300000, guid: d250dc8d61c5ab04a839620b85b5fd27, type: 3}
   mustHave:
   - {fileID: 11400000, guid: fc852160707e6bb49ac0680073ca1b59, type: 2}
   - {fileID: 11400000, guid: 883e4416a23a2104d98243e3fefc903e, type: 2}
